@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/bare.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/fontfix.css">
     <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/office-code-pro" type="text/css"/> -->
-    <!-- <script src="main.js"></script> -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <nav id="navbar">
@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="#intropic">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#lakepol">Lake Pollution</a></li>
+                <li><a href="#lakpol">Lake Pollution</a></li>
             </ul>
         </label>
     </nav>
@@ -37,11 +37,11 @@
     <div id="about">
         <h2 txt="c">ABOUT</h2>
         <grid>
-            <div col="1/2">
-                <p style="font-size: 2rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat nulla quidem reiciendis. Beatae, voluptas! Nulla officia aperiam sint recusandae quibusdam illum, maxime error minima! Sunt illum unde vero ratione!</p>
+            <div col="1/3">
+                <p txt="j" style="font-size: 2rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat nulla quidem reiciendis. Beatae, voluptas! Nulla officia aperiam sint recusandae quibusdam illum, maxime error minima! Sunt illum unde vero ratione!</p>
             </div>
-            <div col="1/4"></div>
-            <div col="1/4">
+            <div col="1/3" style="padding:0;"></div>
+            <div col="1/3">
                 <img src="./img/sadimg.jpg" id="sadimg">
             </div>
         </grid>
@@ -53,9 +53,24 @@
                 <img src="./img/sadimg.jpg" id="sadimg">
             </div>
             <div col="1/4"></div> -->
-            <p txt="c" style="font-size: 2rem">Loading Data...</p>
+            <p txt="c" style="font-size: 2rem" id="auto">Loading Data...</p>
         </grid>
     </div>
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready( function(){
+            $('#auto').load('load.php');
+            refresh();
+        });
+        
+        function refresh()
+        {
+            setTimeout( function() {
+            $('#auto').fadeOut('slow').load('load.php').fadeIn('slow');
+            refresh();
+            }, 2000);
+        }
+    </script>
 </body>
 
 <style>
@@ -107,6 +122,8 @@
     #about{
         background-color: #0c0c0c;
         padding: 6rem;
+        padding-left: 15rem;
+        padding-right: 15rem;
     }
 
     #lakpol{
@@ -201,9 +218,4 @@
         100% { opacity: 1.0; }
     }
 </style>
-<script>
-    
-
-    
-</script>
 </html>
