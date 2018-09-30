@@ -10,6 +10,7 @@
     <meta http-equiv='pragma' content='no-cache'>
     <link rel="stylesheet" type="text/css" media="screen" href="./css/bare.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/fontfix.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/office-code-pro" type="text/css"/> -->
     <script src="./js/jquery-3.3.1.min.js"></script>
 </head>
@@ -30,37 +31,49 @@
     <img src="./img/intro_m.jpg" id="intropic_m">
     <img src="./img/intro.jpg" id="intropic">
     <section id="intro" txt="c">
-        <h1>T<span style="font-size: 2.5rem">.</span>T<span style="font-size: 2.5rem">.</span>T</h1>
-        <h5>Track Them Traitors</h5>
-        <h5>Current Status :</h5>
-        <iframe src="./value.html" style="border: 0px; text-align: center;" id="auto">
-            <p>Your browser does not support iframes.</p>
-        </iframe>
-    </section>
-    <div id="about">
-        <h2 txt="c">ABOUT</h2>
         <grid>
             <div col="1/3">
-                <p txt="j" style="font-size: 2rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat nulla quidem reiciendis. Beatae, voluptas! Nulla officia aperiam sint recusandae quibusdam illum, maxime error minima! Sunt illum unde vero ratione!</p>
-            </div>
-            <div col="1/3" style="padding:0;"></div>
-            <div col="1/3">
-                <img src="./img/sadimg.jpg" id="sadimg">
+                <h5 style="padding-top: 2em;">Pollution Level</h5>
+                <iframe src="./value.html" scrolling="no" style="overflow:hidden;border: 0px; text-align: center; padding-bottom: 0px; height: 10rem; "  id="pi">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+                <span><i class="fab fa-twitter" style="color:#07F;"></i>
+                    <a class="twitter-share-button"
+                      href="http://twitter.com/intent/tweet?text=%23SpreadAwareness+%23SaveOurLakes%0ALearn%20more%20at%20http://ctrl-c.club/~greymtr/T2WN2/" style="text-decoration: none;color: #07F;">
+                    Tweet</a>
+                </span>
             </div>
         </grid>
-    </div>
-    <div id="lakpol">
+    </section>
+    <section txt="c" id="about" width="100%" style="margin:auto">
+        <h2>ABOUT</h2>
+        <grid>
+            <div col="2/5">
+                <p txt="c" style="font-size: 2rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat nulla quidem reiciendis. Beatae, voluptas! Nulla officia aperiam sint recusandae quibusdam illum, maxime error minima! Sunt illum unde vero ratione!</p>
+            </div>
+            <div col="1/5"></div>
+            <div col="2/5">
+                <img src="./img/sadimg.jpg" >
+            </div>
+        </grid>
+    </section>
+    <!-- <div id="lakpol">
         <h2 txt="c">LAKE POLLUTION</h2>
         <grid>
             <div col="1/3"></div>
             <div col="1/3" txt="c">
-                <iframe src="./value.html" style="border: 0px; text-align: center;" id="auto">
-                    <p>Your browser does not support iframes.</p>
-                </iframe>
+                <card style="background-color: #0c0c0c;">
+                    <h2 txt="c">Bellandur Lake</h2>
+                    <iframe src="./value.html" style="border: 0px; text-align: center;" id="auto">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe>
+                </card>
             </div>
             <div col="1/3"></div>
         </grid>
-    </div>
+    </div> -->
+
+
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready( function(){
@@ -90,7 +103,7 @@
         left: 0;
         top: 0;
         z-index: -1;
-        /* width: 100vw; */
+        width: 100vw;
         height: 100vh;
     }
 
@@ -102,8 +115,13 @@
 
         padding-top:55vh;
         font-size:5rem;
-        padding-bottom:19rem;
+        padding-bottom:13rem;
 
+    }
+
+    #intro div{
+        background-color: rgb(0,0,0,0.7);
+        padding-bottom: 0px;
     }
     
     #navbar{
@@ -164,7 +182,7 @@
     @media (max-width: 50rem)
     {
         #intro{
-            padding-bottom:12rem;
+            padding-bottom:3rem;
         }
 
         #navbar label ul li{
@@ -174,6 +192,13 @@
         #navbar label ul{
             background: rgb(0,0,0,0.7);
             border-top: 1px solid #080808;
+        }
+        
+        #about{
+            background-color: #0c0c0c;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            text-align: center !important;
         }
 
         #intropic{
@@ -186,6 +211,8 @@
             position: absolute;
             top: 0;
             left: 0;
+            height: 100vh;
+            width: 100vw;
         }
 
         #about{
