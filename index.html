@@ -32,7 +32,10 @@
     <section id="intro" txt="c">
         <h1>T<span style="font-size: 2.5rem">.</span>T<span style="font-size: 2.5rem">.</span>T</h1>
         <h5>Track Them Traitors</h5>
-        <!-- <h5 class="blink_text" style="padding-top: 19rem; text-transform: uppercase">Your city needs help</h5> -->
+        <h5>Current Status :</h5>
+        <iframe src="./value.html" style="border: 0px; text-align: center;" id="auto">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
     </section>
     <div id="about">
         <h2 txt="c">ABOUT</h2>
@@ -72,6 +75,20 @@
             refresh();
             }, 2000);
         }
+
+        // Color changing operation
+        $(function () {
+            // Score Color
+            var score = parseInt($('#auto').text().trim());
+            var color = 'blue';
+            if (!isNaN(score)) {
+                if (score >= 8.5 && score<=6.5) {
+                    color = 'orange';
+                }
+                $('#score').css('color', color);
+            }
+        });
+
     </script>
 </body>
 
