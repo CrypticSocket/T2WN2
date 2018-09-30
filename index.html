@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="30">
     <title>T2WN2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable">
     <meta http-equiv='cache-control' content='no-cache'>
@@ -60,22 +61,18 @@
     </div>
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
-        // $(document).ready( function(){
-        //     $('#auto').load('value.html');
-        //     refresh();
-        // });
+        $(document).ready( function(){
+            $('#auto').load('value.html');
+            refresh();
+        });
         
-        // function refresh()
-        // {
-        //     setTimeout( function() {
-        //     $('#auto').load('value.html');
-        //     refresh();
-        //     }, 2000);
-        // }
-
-        function myFunction() {
-        location.reload();
-    }
+        function refresh()
+        {
+            setTimeout( function() {
+            $('#auto').load('value.html');
+            refresh();
+            }, 2000);
+        }
     </script>
 </body>
 
