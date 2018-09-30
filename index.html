@@ -49,24 +49,26 @@
     <div id="lakpol">
         <h2 txt="c">LAKE POLLUTION</h2>
         <grid>
-            <!-- <div col="1/4">
-                <img src="./img/sadimg.jpg" id="sadimg">
+            <div col="1/3"></div>
+            <div col="1/3" txt="c">
+                <iframe src="./value.html" style="border: 0px; text-align: center;" id="auto">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
             </div>
-            <div col="1/4"></div> -->
-            <p txt="c" style="font-size: 2rem" id="auto">Loading Data...</p>
+            <div col="1/3"></div>
         </grid>
     </div>
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready( function(){
-            $('#auto').load('load.php');
+            $('#auto').load('value.html');
             refresh();
         });
         
         function refresh()
         {
             setTimeout( function() {
-            $('#auto').fadeOut('slow').load('load.php').fadeIn('slow');
+            $('#auto').fadeOut('slow').load('value.html').fadeIn('slow');
             refresh();
             }, 2000);
         }
