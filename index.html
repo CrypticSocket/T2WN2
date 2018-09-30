@@ -60,18 +60,22 @@
     </div>
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
-        $(document).ready( function(){
-            $('#auto').load('value.html');
-            refresh();
-        });
+        // $(document).ready( function(){
+        //     $('#auto').load('value.html');
+        //     refresh();
+        // });
         
-        function refresh()
-        {
-            setTimeout( function() {
-            $('#auto').fadeOut('slow').load('value.html').fadeIn('slow');
-            refresh();
-            }, 2000);
-        }
+        // function refresh()
+        // {
+        //     setTimeout( function() {
+        //     $('#auto').load('value.html');
+        //     refresh();
+        //     }, 2000);
+        // }
+
+        function myFunction() {
+        location.reload();
+    }
     </script>
 </body>
 
