@@ -7,13 +7,18 @@
         <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
         <script>
             // Color changing operation
+            
                 // Score Color
-                var score = parseInt($('#auto').text().trim());
-                var color = 'blue';
+                var score = document.getElementById("auto").value;
+                
+                
                 if (score >= 8.5 && score<=6.5) {
-                        color = 'orange';
+                        document.getElementById("auto").stylr.backgroundColor = "red";
+                    }
+                else{
+                    document.getElementById("auto").stylr.backgroundColor = "green";
                 }
-                $('#auto').css('color', color);
+            
         </script>
     </body>
 </html>
