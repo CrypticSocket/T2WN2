@@ -75,20 +75,6 @@
             refresh();
             }, 2000);
         }
-
-        // Color changing operation
-        $(function () {
-            // Score Color
-            var score = parseInt($('#auto').text().trim());
-            var color = 'blue';
-            if (!isNaN(score)) {
-                if (score >= 8.5 && score<=6.5) {
-                    color = 'orange';
-                }
-                $('#score').css('color', color);
-            }
-        });
-
     </script>
 </body>
 
